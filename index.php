@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,9 +29,9 @@
               <h3 class="login-heading mb-4">Login</h3>
 
               <!-- Sign In Form -->
-              <form>
+              <form action="servidor/login/loguear.php" method="post">
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+                  <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario">
                   <label for="usuario">Usuario</label>
                 </div>
                 <div class="form-floating mb-3">
@@ -36,10 +40,7 @@
                 </div>               
 
                 <div class="d-grid">
-                  <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Entrar</button>
-                  <div class="text-center">
-                    <a class="small" href="#">Acerca de..</a>
-                  </div>
+                  <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Ingresar</button>
                 </div>
 
               </form>
